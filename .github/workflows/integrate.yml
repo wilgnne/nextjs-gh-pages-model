@@ -7,7 +7,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     env:
-      BACKEND_URL: ${{ github.event.repository.name }}/
+      BACKEND_URL: /${{ github.event.repository.name }}
 
     steps:
       - name: Checkout 🛎️
