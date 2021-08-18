@@ -22,7 +22,9 @@ jobs:
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install and Build 🔧
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
+          with:
+            node-version: '14'
       - run: yarn install
       - run: yarn export
       - run: touch out/.nojekyll
